@@ -1,0 +1,120 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.12 price css start
+/*----------------------------------------*/
+
+.rr-price-2 {
+    &-shap-side-icon {
+        position: absolute;
+        right: 0;
+        bottom: 93px;
+    }
+    &-shap {
+        position: absolute;
+        right: 25px;
+        top: 27%;
+        background: var(--rr-grey-1);
+        width: 90px;
+        height: 90px;
+        text-align: center;
+        line-height: 86px;
+        border-radius: 50%;
+        border: 5px solid;
+        border-color: #fff;
+    }
+    &-top {
+        background: var(--rr-grey-2);
+        padding: 40px;
+        margin-bottom: 20px;
+        -webkit-clip-path: polygon(100% 0, 100% 75%, 64% 100%, 0 88%, 0 0);
+        clip-path: polygon(100% 0, 100% 75%, 64% 100%, 0 88%, 0 0);
+        
+        & span {
+            font-size: 16px;
+            color: #3a3a3a;
+            background: #fff;
+            padding: 10px 40px;
+            font-weight: 600;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            display: inline-block;
+            font-family: var(--rr-ff-p);
+        }
+    }
+    &-title-box {
+        @media #{$xs, $sm} {
+            margin-bottom: 0;
+        }
+    }
+    &-list {
+        padding: 40px;
+        padding-bottom: 25px;
+        padding-top: 0;
+        @media #{xss} {
+            padding: 30px; 
+          }
+    }
+
+    &-item {
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0px 0px 80px 0px rgba(18, 14, 14, 0.08);
+       background-color: var(--rr-common-white);
+       border-radius: 0 0 12px 12px;
+        &.active {
+            background-color: var(--rr-heading-1);
+
+            & .rr-price-2-top {
+                background-color: var(--rr-theme-1);
+                & h5 {
+                    color: var(--rr-common-white);
+                }
+
+                & span {
+                    color: var(--rr-heading-1);
+                }
+            }
+            & ul li{
+                color: #fff;
+
+            }
+            & a {
+                background-color: var(--rr-theme-1);
+                color: var(--rr-common-white);
+                & i {
+                    background-color: var(--rr-theme-2);
+                }
+            }
+           
+        }
+    }
+
+
+    &-list {
+        & ul {
+            & li {
+                list-style-type: none;
+                position: relative;
+                color: #636363;
+                margin-bottom: 15px;
+                @media #{$lg} {
+                    font-size: 15px;
+                }   
+            }
+        }
+    }
+
+    &-rate {
+        color: #fff;
+        font-size: 43px;
+   
+        & b {
+            color: #d9d9d9;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+
+}

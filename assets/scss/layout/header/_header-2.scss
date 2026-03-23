@@ -1,0 +1,128 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.2 Header Style 2
+/*----------------------------------------*/
+
+.rr-header-2 {
+    &-contat-text b:hover {
+        opacity: .7;
+    }
+    &-border {
+        border-bottom: 1px solid #3c3e47;
+    }
+    &-icon {
+        & button {
+            font-size: 19px;
+            display: inline-block;
+            color: #ffff !important;
+            margin-right: 7px;
+            transition: 0.3s;
+            border: 1px solid;
+            border-radius: 66px;
+            padding: 10px;
+            line-height: 0;
+        }
+    }
+    &-social {
+        display: flex;
+        align-items: center;
+        & span {
+            font-size: 18px;
+            color: var(--rr-common-white);
+            margin-right: 40px;
+            transition: all 0.3s ease-out 0s;
+            font-weight: 600;
+        }
+        & ul {
+            & li {
+                display: inline-block;
+                margin: 0 auto;
+                
+                & a {
+                    height: 34px;
+                    width: 34px;
+                    text-align: center;
+                    line-height: 34px;
+                    background-color: var(--rr-common-white);
+                    border-radius: 50px;
+                    color: var(--rr-theme-1);
+                    display: block;
+                    margin-right: 5px;
+                    transition: all 0.3s ease-out 0s;
+                    &:hover {
+                        background-color: var(--rr-theme-2);
+                        color: var(--rr-common-white);
+                    }
+                }
+            }
+        }
+    }
+    &-top {
+        padding: 20px 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--rr-theme-1);
+            width: 40%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+
+    &-top-info {
+        & ul {
+            & li {
+                list-style: none;
+
+                & a {
+                    color: var(--rr-common-white);
+
+                }
+            }
+        }
+    }
+
+    &-menu {
+        & ul {
+            & li {
+                & a {
+                    color: #636363;
+                    font-size: 16px;
+                    transition: .7s;
+
+                    &:hover {
+                        color: var(--rr-theme-1);
+                    }
+                }
+
+            }
+        }
+    }
+
+    &-lang {
+       
+        @media #{$xl,} {
+            margin-left: 40px;
+        }
+        & .nice-select {
+            -webkit-tap-highlight-color: transparent;
+            background-color: transparent;
+            border-radius: 0;
+            border: none;
+            padding-right: 51px !important;
+        }
+    }
+}
+.rr-btn.rr-header-spc {
+    padding: 15px 25px;
+}
+.rr-header-lang-main .nice-select::after {
+	right: 0px !important;
+}
+.rr-header-lang-main .nice-select {
+    padding-right: 14px !important;
+}

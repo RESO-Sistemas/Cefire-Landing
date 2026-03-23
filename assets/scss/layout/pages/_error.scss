@@ -1,0 +1,18 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.7 error css start
+/*----------------------------------------*/
+.rr-error{
+    &-title {
+        font-weight: 700;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    &-content {
+        & span {
+            color: #636363;
+            font-size: 17px;
+        }
+    }
+}

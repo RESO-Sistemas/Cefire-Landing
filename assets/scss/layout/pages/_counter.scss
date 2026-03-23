@@ -1,0 +1,70 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.5 counter css start
+/*----------------------------------------*/
+.rr-counter-info {
+
+    @media #{$md, $xs} {
+        margin-top: 30px;
+    }
+}
+.rr-counter-info-text {
+    &  h4 {
+        @media #{$xs} {
+            font-size: 15px;
+            margin-top: 20px;
+        }
+    }
+    & p {
+        @media #{$xs} {
+            font-size: 13px;
+            max-width: 200px;
+        }
+    }
+}
+
+.rr-counter {
+    &-btn {
+       
+        @media #{$xss} {
+            text-align: center;
+        }
+    }
+    &-box-wapper {
+        background: #f2f4f9;
+        width: 380px;
+        margin-top: 304px;
+        padding: 30px 0;
+        padding-bottom: 0;
+        @media #{$xss} {
+            width: 312px;
+            margin-top: 235px;
+            flex-wrap: wrap;
+        }
+    }
+    &-box-info-text {
+        @media #{$xss} {
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+    &-img img {
+        position: absolute;
+        clip-path: polygon(100% 75%, 93% 100%, 84% 75%, 0 75%, 0 0, 100% 0);
+    }
+    &-box-icon {
+        & span {
+            width: 75px;
+            height: 75px;
+            background: var(--rr-theme-1);
+            color: var(--rr-common-white);
+            text-align: center;
+            line-height: 75px;
+            display: block;
+            font-size: 45px;
+            border-radius: 50px;
+            margin-top: -46px;
+        }
+    }
+}

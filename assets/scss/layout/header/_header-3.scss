@@ -1,0 +1,181 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.3 Header Style 3
+/*----------------------------------------*/
+.rr-header-2 {
+    &-contat-icon {
+        & span {
+            color: var(--rr-theme-1);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: -5px;
+            width: 30px;
+            height: 30px;
+            -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+            clip-path: polygon(100% 0, 0 0, 50% 100%);
+            background: var(--rr-common-white);
+            transform: rotate(46deg);
+        }
+    }
+    &-top {
+        padding: 4px 0;
+        position: relative;
+        z-index: 7;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--rr-theme-1);
+            width: 43%;
+            height: 100%;
+            z-index: 1;
+            @media #{$xxxxl} {
+                width: 42%;
+            }
+            @media #{$xxxl} {
+                width: 42%;
+            }
+            @media #{$xxl} {
+                width: 41%;
+            }
+        }
+        
+    }
+    &-contat {
+        background: var(--rr-theme-1);
+        padding: 18px 25px;
+        & h4 {
+            color: var(--rr-common-white);
+            margin-bottom: 0;
+            font-size: 22px;
+            @media #{$xxl} {
+               font-size: 18px;
+            }
+          }
+          & b {
+            color: var(--rr-common-white);
+            font-weight: 400;
+          }
+    }
+    &-contat-icon {
+        height: 50px;
+        width: 50px;
+        background: var(--rr-common-white);
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50px;
+        color: var(--rr-theme-1);
+        font-size: 20px;
+    }
+    &-before {
+        &::after {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: 577px;
+            width: 50px;
+            height: 50px;
+            clip-path: polygon(0 0, 0 0, 100% 100%, 0% 100%);
+            background: #f1dde7;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: 527px;
+            width: 50px;
+            height: 50px;
+            clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+            background: #efbfcf;
+        }
+    }
+    &-search button {
+        color: #000 !important;
+    }
+
+    &-top-info {
+        & ul {
+            & li {
+                list-style: none;
+
+                & a {
+                    color: var(--rr-common-white);
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+                & span {
+                    color: var(--rr-common-white);
+                    
+                    & i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-menu {
+        & ul {
+            & li {
+                & a {
+                    color: #636363;
+                    font-size: 16px;
+                    transition: .7s;
+                    
+                    &:hover {
+                        color: var(--rr-theme-1);
+                    }
+                }
+
+            }
+        }
+    }
+    &-lang {
+        & .nice-select::after {
+            right: 32px;
+        }
+        & .nice-select .list {
+            left: 21px;
+        }
+    }
+}
+
+.rr-header {
+    
+    &-menu {
+        & nav {
+            & ul {
+                & li {
+                    
+                    & > a {
+                        color: #232323 !important;
+                        padding: 17px 0 !important;
+                    }
+                    &.has-dropdown::after {
+                        color: #232323 !important;
+                    }
+               
+                    & .submenu {
+                        & > li {
+                            & > a {
+                                color: var(--rr-common-white) !important;
+                                &::after {
+                                    bottom: 16px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.rr-header-3-menu .rr-header-main-menu > nav > ul > li .submenu {
+	top: 126%;
+}

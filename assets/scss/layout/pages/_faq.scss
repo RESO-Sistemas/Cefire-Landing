@@ -1,0 +1,188 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.8 faq css start
+/*----------------------------------------*/
+.rr-faq-active {
+    & h2 {
+        & button {
+            color: #fff;
+        }
+       
+    }
+}
+
+.rr-faq{
+    &-area {
+        @media #{$md} {
+            padding-bottom: 0;
+        }
+    }
+    &-wrap {
+        border: 1px solid var(--rr-border-1);
+    }
+    &-active {
+        & button {
+            background: var(--rr-theme-2);
+            &::after{
+                color: #fff;
+            }
+        }
+        & h2 {
+            color: #fff;
+            margin-top: -8px;
+        }
+    
+    }
+    &-thumb {
+        & img {
+            width: inherit;
+            margin-left: 10px;
+            @media #{$xxl, $xl, $lg, $md, $xs, } {
+                margin-left:0px;
+            }
+            @media #{$xs} {
+                margin-top: 30px;
+                margin-left:0px;
+            }
+        }
+    }
+    &-offer{
+        position: absolute;
+        left: 56%;
+        top: 125px;
+        height: 115px;
+        width: 115px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: var(--rr-theme-1);
+        animation: zoom 7000ms infinite;
+
+        @media #{$xl,$lg}{
+            position: absolute;
+            left: 52%;
+            top: 125px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: var(--rr-theme-1);
+        }
+        @media #{$xs}{
+            left: 56%;
+            top: 68px;
+            height: 90px;
+            width: 90px;
+        }
+        & span {
+            color: var(--rr-common-white);
+            text-align: center;
+            font-weight: 700;
+            font-size: 18px;
+            display: inline-block;
+            transform: translateY(29px);
+            font-family: var(--rr-ff-heading);
+            @media #{$xs}{
+                transform: translateY(17px);
+            }
+            & b {
+                font-size: 36px;
+                @media #{$xl,$lg,$xs}{
+                    font-size: 27px;
+                    line-height: 0;
+                }
+            }
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            bottom: 8px;
+            left: 5px;
+            height: 22px;
+            width: 22px;
+            transform: rotate(-9deg);
+            background-color: var(--rr-theme-1);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            top: 0;
+            right: 100px;
+            animation: moving 7s linear infinite;
+            @media #{$xxxl}{
+                right: -5%;
+            }
+            @media #{$xxl}{
+                right: -8%;
+            }
+            @media #{$xl}{
+                right: -12%;
+            }
+            @media #{$lg}{
+                right: -27%;
+            }
+        }
+        &-2 {
+            position: absolute;
+            bottom: 70px;
+            right: 15px;
+            z-index: 1;
+            animation: rrtranslateY2 3s infinite alternate;
+        }
+        &-3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        &-4 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation: rrtranslateX2 3s infinite alternate;
+            @media #{$xl}{
+                right: -9%;
+            }
+            @media #{$lg}{
+                right: -25%;
+            }
+        }
+        &-5 {
+            position: absolute;
+            top: 55px;
+            right: 565px;
+            animation: zoom 7000ms infinite;
+            @media #{$xxxl}{
+                right: 420px;
+            }
+            @media #{$xxl}{
+                right: 350px;
+            }
+            @media #{$xl}{
+                right: 250px;
+            }
+            @media #{$lg}{
+                right: 150px;
+            }
+            @media #{$md}{
+                right: 50px;
+            }
+            & img {
+                @media #{$xxxl}{
+                    max-width: 67%;
+                }
+                @media #{$xxl}{
+                    max-width: 71%;
+                }
+                @media #{$xl}{
+                    max-width: 71%;
+                }
+                @media #{$lg}{
+                    max-width: 65%;
+                }
+            }
+        }
+    }
+}

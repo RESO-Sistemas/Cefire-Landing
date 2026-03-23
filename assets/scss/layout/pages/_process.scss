@@ -1,0 +1,161 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.13 contact css start
+/*----------------------------------------*/
+
+
+.rr-process {
+    &-shap-img {
+        position: absolute;
+        z-index: 1;
+        bottom: 157px;
+
+        @media #{$md, $xs, $sm} {
+            display: none;
+        }
+    }
+
+    &-padding {
+        padding-bottom: 400px;
+    }
+}
+
+.rr-work-2 {
+    &__content {
+        & p {
+            & br {
+                @media #{$lg, $md, $xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-img img {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+    }
+    &__content {
+        & br {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+
+    &__icon {
+        width: 120px;
+        height: 120px;
+        text-align: center;
+        line-height: 120px;
+        background: var(--rr-common-white);
+        font-size: 55px;
+        border-radius: 50%;
+        color: var(--rr-theme-1);
+        margin: 0 auto;
+        z-index: 2;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 0;
+            height: 0;
+            background: var(--rr-theme-1);
+            content: '';
+            text-align: center;
+            line-height: 100px;
+            border-radius: 50%;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: all 0.3s ease-out 0s;
+            -moz-transition: all 0.3s ease-out 0s;
+            -ms-transition: all 0.3s ease-out 0s;
+            -o-transition: all 0.3s ease-out 0s;
+            transition: all 0.3s ease-out 0s;
+        }
+
+        &::after {
+            border: 2px solid #eaeced;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            content: '';
+            border-radius: 50%;
+            -webkit-transition: all 0.3s ease-out 0s;
+            -moz-transition: all 0.3s ease-out 0s;
+            -ms-transition: all 0.3s ease-out 0s;
+            -o-transition: all 0.3s ease-out 0s;
+            transition: all 0.3s ease-out 0s;
+        }
+
+        & span {
+            -webkit-transition: all 0.3s ease-out 0s;
+            -moz-transition: all 0.3s ease-out 0s;
+            -ms-transition: all 0.3s ease-out 0s;
+            -o-transition: all 0.3s ease-out 0s;
+            transition: all 0.3s ease-out 0s;
+        }
+
+    }
+
+    &__shap-img {
+        position: absolute;
+        z-index: 1;
+        top: -42px;
+        left: 0;
+
+        @media #{$xs} {
+            display: none;
+        }
+    }
+
+    &__item {
+        &:hover {
+            & .rr-work-2__icon::before {
+                opacity: 1;
+                visibility: visible;
+                width: 100px;
+                height: 100px;
+            }
+
+            & .rr-work-2__icon::after {
+                border: none;
+            }
+
+            & span {
+                position: relative;
+                z-index: 1;
+                color: var(--rr-common-white);
+            }
+        }
+    }
+}
+
+
+.tl-progress input {
+    color: #203240 !important;
+}
+.rr-about-3-progressbar:nth-child(1) {
+    border-right: 0;
+}
+.rr-about-3-progressbar:nth-child(2) {
+    border-right: 0;
+}
+.rr-about-3-progressbar:nth-child(3) {
+    border-right: 0;
+}
+.rr-about-3-progressbar:hover.rr-about-3-progressbar:nth-child(1) {
+    border-right: 0;
+}
+.rr-about-3-progressbar:hover.rr-about-3-progressbar:nth-child(2) {
+    border-right: 0;
+}
+.rr-about-3-progressbar:hover.rr-about-3-progressbar:nth-child(3) {
+    border-right: 0;
+}

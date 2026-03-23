@@ -1,0 +1,288 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.12 Accordion
+/*----------------------------------------*/
+.accordion-items.rr-faq-active {
+    & h2 {
+        & button {
+            color: var(--rr-common-white);
+            width: 100%;
+            & i {
+                background-color: var(--rr-theme-1);
+            }
+
+            &::after {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.rr-custom-accordion {
+    & .accordion-items {
+        border-bottom: 1px solid #cecece;
+        & i {
+            height: 22px;
+            width: 22px;
+            background: var(--rr-theme-2);
+            line-height: 22px;
+            text-align: center;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+    }
+
+    & .accordion-buttons {
+        position: relative;
+        font-size: 18px;
+        text-align: left;
+        padding: 10px 60px;
+        padding-left: 23px;
+        transition: .3s;
+        font-family: var(--rr-ff-heading);
+        color: var(--rr-common-black);
+        padding-bottom: 17px;
+        @media #{$lg} {
+            font-size: 17px;
+        }
+
+        @media #{$md} {
+            font-size: 16px;
+        }
+
+        @media #{$xs} {
+            font-size: 14px;
+            display: flex;
+            padding: 21px 14px;
+            padding-left: 10px;
+        }
+
+        @media #{$sm} {
+            font-size: 14px;
+            display: flex;
+        }
+
+        &::after {
+            position: absolute;
+            content: "\f106";
+            font-family: 'Font Awesome 5 Pro';
+            top: 10px;
+            right: 0px;
+            font-weight: 700;
+            font-size: 17px;
+            opacity: 1;
+            transition: .3s;
+            height: 22px;
+            width: 22px;
+            line-height: 23px;
+            border-radius: 50%;
+            text-align: center;
+            color: var(--rr-theme-1);
+            padding-right: 30px;
+
+            @media #{$xs, $sm} {
+                right: 20px;
+                padding-right: 0;
+            }
+        }
+
+        &.collapsed {
+            &::after {
+                content: '\f107';
+            }
+        }
+
+    }
+
+    & .collapsed {
+        position: relative;
+        z-index: 99;
+        font-size: 17px;
+        color: #6c6c6e;
+        font-weight: 500;
+        width: 100%;
+        @media #{$xs, $sm} {
+          font-size: 14px;
+        }
+
+    }
+
+    & .accordion-body {
+        padding: 30px;
+        padding-bottom: 31px;
+        padding-right: 30px;
+        padding-top: 34px;
+        position: relative;
+        z-index: 1;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 24px;
+        color: #767676;
+        position: relative;
+        max-width: 450px;
+
+        @media #{$lg} {
+            max-width: 434px;
+        }
+
+        & span {
+            font-size: 60px;
+            color: var(--rr-theme-1);
+            font-weight: 700;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: var(--rr-theme-1);
+            color: transparent;
+            transform: rotate(-90deg);
+            display: block;
+            position: absolute;
+            right: -105px;
+            top: 50px;
+
+            @media #{$xl} {
+                right: -34px;
+            }
+            @media #{$lg} {
+                top: 55px;
+                right: -118px;
+            }
+
+            @media #{$md, $sm, $xs} {
+                display: none;
+            }
+        }
+
+        @media #{$xl} {
+            font-size: 15px;
+        }
+
+        @media #{$lg} {
+            font-size: 14px;
+        }
+
+        @media #{$md} {
+            font-size: 14px;
+        }
+
+        @media #{$xs, $sm} {
+            font-size: 13px;
+            padding-right: 20px;
+            line-height: 26px;
+            padding: 20px;
+        }
+    }
+}
+
+.rr-custom-accordion-2 {
+    & .accordion-items {
+        margin-bottom: 30px;
+    }
+
+    & .accordion-buttons {
+        position: relative;
+        width: 100%;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: left;
+        padding: 21px 60px;
+        padding-left: 30px;
+        transition: .3s;
+        font-family: var(--rr-ff-heading);
+        color: var(--rr-common-black);
+        border: 1px solid #e7e7e7;
+
+        @media #{$lg} {
+            font-size: 15px;
+        }
+
+        @media #{$md} {
+            font-size: 16px;
+        }
+
+        @media #{$xs} {
+            font-size: 15px;
+            padding-left: 20px;
+        }
+
+        @media #{$sm} {
+            font-size: 17px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "\f068";
+            font-family: 'Font Awesome 5 Pro';
+            top: 21px;
+            right: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            opacity: 1;
+            transition: .3s;
+            height: 22px;
+            width: 22px;
+            line-height: 23px;
+            border-radius: 50%;
+            text-align: center;
+            color: var(--rr-common-white);
+            background-color: var(--rr-theme-1);
+
+            @media #{$xs} {
+                right: 20px;
+            }
+        }
+
+        &:not(.collapsed) {
+            border: 1px solid black;
+        }
+
+        &.collapsed {
+            &::after {
+                content: '\f067';
+            }
+        }
+
+    }
+
+    & .collapsed {
+        position: relative;
+        z-index: 99;
+    }
+
+    & .accordion-body {
+        padding: 25px 30px;
+        padding-right: 40px;
+        position: relative;
+        z-index: 1;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #767676;
+
+        @media #{$xl} {
+            font-size: 15px;
+        }
+
+        @media #{$lg} {
+            font-size: 14px;
+        }
+
+        @media #{$md} {
+            font-size: 14px;
+        }
+
+        @media #{$xs} {
+            font-size: 13px;
+            padding-right: 0;
+            line-height: 26px;
+        }
+
+        @media #{$sm} {
+            font-size: 14px;
+        }
+    }
+}
+.rr-custom-accordion .accordion-items:last-child {
+	border-bottom: none;
+}

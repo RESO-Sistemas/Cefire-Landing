@@ -1,0 +1,152 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.15 Section Title
+/*----------------------------------------*/
+.rr-section {
+    &-subtitle img {
+        margin-top: -5px;
+    }
+    &-border-rl {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 17px;
+            left: 0;
+            width: 435px;
+            height: 1px;
+            background: #ded7d7;
+            @media #{$lg} {
+                width: 320px;
+            }
+            @media #{$md, $xs} {
+               display: none;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 17px;
+            right: 0;
+            width: 435px;
+            height: 1px;
+            background: #ded7d7;
+            @media #{$lg} {
+                width: 320px;
+            }
+            @media #{$md, $xs} {
+                display: none;
+             }
+        }
+    }
+    &-subtitle {
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--rr-theme-1);
+        display: inline-block;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        font-family: var(--rr-ff-p);
+        @media #{$xs} {
+            font-size: 14px;
+        }
+        & img {
+            margin-bottom: -4px;
+        }
+    }
+    &-title-space {
+        @media #{$xs} {
+            margin-bottom: 30px !important;
+        }
+    }
+    &-title {
+        font-size: 40px;
+        margin-bottom: 0;
+        line-height: 1.2;
+        color: var(--rr-heading-1);
+    
+        @media #{$xxl} {
+            font-size: 35px;
+        }
+    
+        @media #{$xl} {
+            font-size: 32px;
+        }
+    
+        @media #{$lg} {
+            font-size: 35px;
+        }
+     
+        @media #{$md} {
+            font-size: 35px;
+    
+            & br {
+                display: none;
+            }
+        }
+    
+        @media #{$xs} {
+            font-size: 27px;  
+            & br {
+                display: none;
+            }
+        }
+    
+        &-2 {
+            font-size: 66px;
+    
+            @media #{$xxxl} {
+                font-size: 62px;
+            }
+    
+            @media #{$xxl} {
+                font-size: 58px;
+            }
+    
+            @media #{$xl} {
+                font-size: 55px;
+            }
+    
+            @media #{$lg} {
+                font-size: 48px;
+            }
+    
+            @media #{$md} {
+                font-size: 44px;
+            }
+    
+            @media #{$xs} {
+                font-size: 30px;
+            }
+    
+            @media #{$sm} {
+                font-size: 34px;
+            }
+        }
+    
+        &-3 {
+            font-size: 45px;
+    
+            @media #{$xl} {
+                font-size: 42px;
+            }
+    
+            @media #{$lg} {
+                font-size: 37px;
+            }
+    
+            @media #{$md} {
+                font-size: 37px;
+            }
+    
+            @media #{$xs} {
+                font-size: 28px;
+    
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+

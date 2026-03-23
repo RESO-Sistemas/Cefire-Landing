@@ -1,0 +1,38 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 brand css start
+/*----------------------------------------*/
+.rr-brand{
+    &-item {
+        & img {
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: all 0.3s linear;
+        }
+        &:hover {
+            & img {
+                filter: grayscale(0%);
+                opacity: 1;
+            }
+        }
+    }
+    &-box {
+        & .rr-brand-item {
+            border: none;
+            padding: 0;
+        }
+    }
+    &-padding {
+        padding-top: 410px;
+        @media #{$xs} {
+            padding-top: 81px;
+          }
+    }
+    &-padding-top {
+        padding-top: 435px;
+    }
+    &-border {
+        border-bottom: 1px solid #ded7d7;
+    }
+}

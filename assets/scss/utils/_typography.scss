@@ -1,0 +1,19 @@
+$font-url: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800&display=swa" rel="stylesheet';
+
+// font family
+$font-family: (
+    'ff': (
+        'body': "'Poppins'",
+        'heading': "'Poppins'",
+        'p': "'Rubik'",
+        'span': "'Rubik'",
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+// font size
+$font-size: (
+    'fz': (
+        'body': 16px,
+        'p': 16px,
+    )
+);

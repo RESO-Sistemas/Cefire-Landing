@@ -1,0 +1,71 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.22 cart css start
+/*----------------------------------------*/
+.rr-table {
+	&-title {
+		font-size: 20px;
+		color: var(--rr-common-white);
+		font-weight: 500;
+		margin: 0;
+	}
+
+	&-time {
+		& h4 {
+			background: var(--rr-common-white);
+			color: #3a3a3a;
+			font-size: 17px;
+			padding: 15px;
+			margin-bottom: 0px;
+		}
+	}
+
+	&-main {
+		& table {
+			& tbody {
+				& tr {
+					& td {
+						font-size: 14px;
+						color: var(--rr-common-white);
+						text-align: center;
+						border: 1px solid #43525e;
+						padding: 13px 10px;
+					}
+				}
+			}
+		}
+	}
+
+	&-doc-name {
+		position: relative;
+		z-index: 3;
+	}
+
+	&-img {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		border: 2px solid var(--rr-theme-1);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease-out 0s;
+		height: 100%;
+		width: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&-main-data {
+		&:hover {
+			& .rr-table-img {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}

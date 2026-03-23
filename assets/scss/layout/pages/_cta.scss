@@ -1,0 +1,217 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.6 cta css start
+/*----------------------------------------*/
+.rr-call {
+    &-info {
+        & span {
+            transition: .3;
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+    &-area {
+        background-position: center;
+        background-size: cover;
+        @media #{$xs} {
+            padding-top: 50px;
+        }
+    }
+    &-btn {
+        @media #{$xs} {
+            text-align: center !important;
+            margin-bottom: 40px;
+            margin-top: 0;
+        }
+    }
+
+    &-info {
+        margin-top: 7px;
+
+        @media #{$xs} {
+            text-align: center;
+        }
+    }
+
+    &-warap {
+        @media #{$sm, $xs} {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-icon {
+        margin-left: 10px;
+    }
+
+    &-shap {
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 470px;
+            background: var(--rr-grey-2);
+            height: 100%;
+            z-index: 1;
+            clip-path: polygon(0 0, 72% 0, 100% 100%, 0% 100%);
+
+            @media #{$xs, $xs} {
+                display: none;
+            }
+        }
+    }
+}
+
+.rr-cta {
+    &-icon {
+        height: 76px;
+        width: 76px;
+        background: #fff;
+        text-align: center;
+        line-height: 76px;
+        border-radius: 50px;
+    }
+
+    &-button {
+        & button:hover {
+           opacity: .9;
+        }
+    }
+
+    &-wrap {
+        &::before {
+            content: "";
+            background-color: var(--rr-theme-1);
+            width: 1420px;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 83px;
+            display: inline-block;
+            z-index: -1;
+            bottom: -73px;
+            @media #{$xl, $lg, $md, $xs, $xs} {
+              width: 100%;
+              border-radius: 0;
+            }
+        }
+    }
+
+    &-left-box {
+
+        @media #{$xs, $sm} {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-area {
+        margin-bottom: -71px;
+        z-index: 2;
+
+        @media #{$xs} {
+            padding-bottom: 150px;
+            padding-top: 20px;
+            margin-bottom: -85px;
+        }
+    }
+
+    &-btn {
+        min-height: 100%;
+        text-align: center;
+        color: var(--rr-common-white);
+        padding: 10px 25px;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 17px;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+        position: relative;
+        z-index: 9;
+        transition: all 0.3s ease-in-out;
+        border-radius: 0 8px 8px 0px;
+    }
+
+    &-wrap {
+        height: 145px;
+
+        &-box {
+            margin-bottom: -135px;
+            position: relative;
+            z-index: 8;
+        }
+    }
+
+    &-right-box {
+        margin-left: 5px;
+
+        @media #{$md,$xs} {
+            margin-left: 0;
+        }
+
+        & input {
+            height: 50px;
+            line-height: 80px;
+            padding: 0 29px;
+            font-size: 16px;
+            color: #79797b;
+            background-color: var(--rr-common-white);
+            border: none;
+            border-radius: 8px;
+
+            @media #{$xs} {
+                height: 60px;
+                line-height: 60px;
+                padding: 0 12px;
+                padding-right: 12px;
+                font-size: 14px;
+                padding-right: 155px;
+            }
+
+            @media #{$sm} {
+                height: 70px;
+                line-height: 70px;
+                padding: 0 12px;
+                padding-right: 12px;
+                font-size: 14px;
+                padding-right: 220px;
+            }
+
+            @include placeholder {
+                color: #a5a5a5;
+            }
+        }
+    }
+
+    &-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+
+    &-title {
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+
+    &-content span {
+        color: #fff;
+        font-family: var(--rr-ff-p);
+        opacity: .9;
+        @media #{$xs} {
+            font-size: 13px;
+        }
+    }
+}
+.rr-cta-btn span {
+    font-family: var(--rr-ff-p);
+}

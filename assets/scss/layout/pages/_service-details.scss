@@ -1,0 +1,91 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.15 service css start
+/*----------------------------------------*/
+
+
+.rr-services-details {
+    &-check {
+        & ul {
+            & li {
+                list-style: none;
+                text-decoration: none;
+                font-size: 16px;
+                color: #6c6c6e;
+                margin-bottom: 9px;
+                font-family: var(--rr-ff-p);
+                & i {
+                    color: var(--rr-theme-1);
+
+                }
+            }
+        }
+    }
+
+    &-list {
+        padding: 35px 30px;
+        background: #f2f4f9;
+        padding-bottom: 25px;
+
+        @media #{$xs} {
+            padding: 15px 17px;
+            padding-bottom: 15px;
+        }
+
+        & span {
+            font-size: 22px;
+            color: var(--rr-theme-2);
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        & ul {
+            & li {
+                list-style: none;
+                text-decoration: none;
+
+                & a {
+                    margin-bottom: 17px;
+                    display: block;
+                    font-size: 16px;
+                    color: var(--rr-theme-2);
+                    background-color: #fff;
+                    padding: 10px;
+                    border: 1px solid #d9d9d9;
+                    border-radius: 30px;
+                    font-weight: 700;
+                    transition: .3s;
+                    font-family: var(--rr-ff-p);
+                    & i {
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        line-height: 30px;
+                        background-color: var(--rr-theme-2);
+                        color: #fff;
+                        border-radius: 50px;
+                        margin-right: 15px;
+                        transition: .3s;
+
+                        @media #{$xs} {
+                            margin-right: 5px;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: var(--rr-theme-1);
+                        border: 1px solid var(--rr-theme-1);
+                        color: #fff;
+
+                        & i {
+                            background-color: #fff;
+                            color: var(--rr-theme-1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

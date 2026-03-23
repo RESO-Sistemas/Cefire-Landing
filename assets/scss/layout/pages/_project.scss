@@ -1,0 +1,313 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.14 product css
+/*----------------------------------------*/
+
+.rr-project {
+    &-tab-wrapper {
+        & ul {
+           
+            @media #{$xs} {
+                justify-content: center !important;
+             }  
+        }
+    }
+    &-text {
+        margin-top: 20px;
+        @media #{$sm} {
+            text-align: center;
+         }   
+    }
+    &-area {
+        margin-top: -101px;
+    }
+    &-title-wrapper {
+        margin-bottom: -42px;
+        @media #{$sm} {
+            margin-bottom: 0px;
+            text-align: center;
+         }   
+    }
+    &-tab-wrapper {
+        @media #{$md, $xs, $sm} {
+            margin-top: 25px;
+         }   
+        & ul {
+            & li {
+                margin-left: 22px !important;
+                @media #{$xss} {
+                    margin-left: 13px !important;
+                    padding-bottom: 20px;
+                 } 
+                & button {
+                    color: #3a3a3a;
+                    font-size: 16px;
+                    border-radius: 0;
+                    font-weight: 600;
+                    padding: 0px 12px;
+                    margin: 5px;
+                    &.active,
+                    .nav-pills .show>.nav-link {
+                        background-color: var(--rr-theme-1) !important;
+                        border-radius: 0;
+                    }
+
+                    &:hover {
+                        color: #fff !important;
+                        background-color: var(--rr-theme-1) !important;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &-thumb-title {
+        color: var(--rr-common-white);
+        transition: 0.3s;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 0;
+
+        &:hover {
+            color: var(--rr-theme-1);
+        }
+    }
+
+    &-thumb-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 30px;
+        padding-bottom: 5px;
+        transition: 0.7s;
+        opacity: 0;
+        visibility: hidden;
+
+        & p {
+            color: #fff;
+        }
+    }
+
+
+
+    &-thumb {
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 35%;
+            width: 100%;
+            background-color: rgb(32, 50, 64);
+            transition: 0.7s;
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 7px;
+        }
+
+        &:hover {
+            &::before {
+                opacity: 0.89;
+                visibility: visible;
+                height: 100%;
+            }
+
+            & .rr-project-thumb-info {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            & .rr-project-right-icon a {
+                opacity: 1;
+                visibility: visible;
+                width: 50px;
+                height: 50px;
+            }
+
+        }
+
+
+    }
+
+    &-right-icon {
+        & a {
+            position: absolute;
+            bottom: 24px;
+            right: 30px;
+            color: #fff;
+            width: 0px;
+            height: 0px;
+            background: var(--rr-theme-1);
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50px;
+            transition: 0.7s;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &-right-icon:hover a {
+        background: var(--rr-common-white);
+        color: var(--rr-theme-2);
+
+    }
+
+    &-padding {
+        margin-top: -104px;
+        @media #{$lg} {
+           margin-top: -90px;
+        }   
+        @media #{ $md} {
+           margin-top: -85px;
+        }   
+        @media #{$xs} {
+           margin-top: 0px;
+        }   
+    }
+}
+
+.row-custom {
+    display: flex;
+    margin: 0 -15px;
+    
+    @media #{$xss} {
+        flex-direction: column;
+     }   
+}
+
+.col-custom {
+    flex: 1;
+    width: 320px;
+    height: 369px;
+    background-size: cover;
+    margin-top: 0;
+    transition: 0.4s;
+}
+
+.rr-project-4 {
+    &-item {
+        height: 100%;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    &-thumb {
+        height: 100%;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    &-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0 40px 32px 38px;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    &-title {
+        font-size: 17px;
+        color: var(--rr-common-white);
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: var(--rr-theme-1);
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .4s;
+        font-family: var(--rr-ff-p);
+        font-weight: 500;
+        @media #{$xs} {
+           font-size: 14px;
+        }
+    }
+
+    &-thumb {
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+.col-custom {
+    &.active {
+        flex: 2;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #203240;
+            z-index: 1;
+            opacity: .9;
+        }
+        & .rr-project-4-title {
+            opacity: 1;
+            visibility: visible;
+            padding: 22px 34px;
+            @media #{$xs} {
+                padding: 17px 14px;
+             }
+        }
+    }
+}
+
+.rr-projects {
+    &-content {
+        & span {
+            font-size: 22px;
+            color: var(--rr-grey-2);
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+    }
+    &-info {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        background: #e1355c;
+        color: var(--rr-common-white);
+        z-index: 9;
+        padding: 20px 50px;
+        opacity: .9;
+        font-family: var(--rr-ff-p);
+
+        @media #{$xs} {
+            bottom: -12px;
+         }   
+     
+        & ul {
+            & li {
+                list-style: none;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                & span {
+                    margin-left: 29px;
+                }
+            }
+        }
+    }
+}
