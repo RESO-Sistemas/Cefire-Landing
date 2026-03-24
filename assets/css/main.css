@@ -1735,6 +1735,75 @@ div.demo img {
   transition: 0.5s;
 }
 
+/* CEFIRE: button animation and icon-color consistency */
+:is(.rr-btn, .rr-btn-1, .rr-btn-2, .rr-btn-white, .rr-btn-white-2) {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+:is(.rr-btn, .rr-btn-1, .rr-btn-2, .rr-btn-white, .rr-btn-white-2)::before {
+  transition: width 0.5s ease;
+}
+
+:is(.rr-btn, .rr-btn-1, .rr-btn-2, .rr-btn-white, .rr-btn-white-2):hover::before {
+  width: 100%;
+}
+
+:is(.rr-btn, .rr-btn-1, .rr-btn-2, .rr-btn-white, .rr-btn-white-2) span i {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Main color = theme-1: white circle + black plus; hover inverted */
+:is(.rr-btn, .rr-btn-1) {
+  background-color: var(--rr-theme-1);
+  color: var(--rr-common-white);
+  border: 1px solid var(--rr-theme-1);
+}
+
+:is(.rr-btn, .rr-btn-1)::before {
+  background: var(--rr-common-white);
+}
+
+:is(.rr-btn, .rr-btn-1) span i {
+  background-color: var(--rr-common-white);
+  color: var(--rr-common-black);
+}
+
+:is(.rr-btn, .rr-btn-1):hover {
+  background-color: var(--rr-common-white);
+  color: var(--rr-common-black);
+}
+
+:is(.rr-btn, .rr-btn-1):hover span i {
+  background-color: var(--rr-theme-1);
+  color: var(--rr-common-white);
+}
+
+/* Main color = common-white: theme circle + white plus + theme-4 border; hover inverted */
+:is(.rr-btn-white, .rr-btn-white-2) {
+  background-color: var(--rr-common-white);
+  color: var(--rr-common-black);
+  border: 1px solid var(--rr-theme-4);
+}
+
+:is(.rr-btn-white, .rr-btn-white-2)::before {
+  background: var(--rr-theme-1);
+}
+
+:is(.rr-btn-white, .rr-btn-white-2) span i {
+  background-color: var(--rr-theme-1);
+  color: var(--rr-common-white);
+}
+
+:is(.rr-btn-white, .rr-btn-white-2):hover {
+  background-color: var(--rr-theme-1);
+  color: var(--rr-common-white);
+}
+
+:is(.rr-btn-white, .rr-btn-white-2):hover span i {
+  background-color: var(--rr-common-white);
+  color: var(--rr-common-black);
+}
+
 .rr-form-theme-bg {
   font-size: 16px;
   font-weight: 500;
@@ -10487,12 +10556,18 @@ body .ui-tooltip {
 .rr-price-2-item.active ul li {
   color: #fff;
 }
-.rr-price-2-item.active a {
+.rr-price-2-item.active .rr-btn-2 {
+  color: var(--rr-common-black);
+}
+.rr-price-2-item.active .rr-btn-2 span i {
   background-color: var(--rr-theme-1);
+}
+.rr-price-2-item.active .rr-btn-2:hover {
   color: var(--rr-common-white);
 }
-.rr-price-2-item.active a i {
-  background-color: var(--rr-theme-2);
+.rr-price-2-item.active .rr-btn-2:hover span i {
+  background-color: var(--rr-common-white);
+  color: var(--rr-common-black);
 }
 .rr-price-2-list ul li {
   list-style-type: none;
