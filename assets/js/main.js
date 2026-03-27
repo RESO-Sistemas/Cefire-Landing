@@ -484,13 +484,24 @@
 
 
 	// 13. Swiper Js
-	const slider2swiper = new Swiper('.rr-slider-2-active', {
+	const slider2Selector = '.rr-slider-2-active';
+	const slider2SlideCount = document.querySelectorAll(`${slider2Selector} .swiper-slide`).length;
+	const slider2HasMultipleSlides = slider2SlideCount > 1;
+
+	const slider2swiper = new Swiper(slider2Selector, {
 		// Optional parameters
 		speed: 1500,
-		loop: true,
+		loop: slider2HasMultipleSlides,
 		slidesPerView: 1,
-		autoplay: true,
+		autoplay: slider2HasMultipleSlides ? {
+			delay: 6000,
+			disableOnInteraction: false,
+		} : false,
+		allowTouchMove: slider2HasMultipleSlides,
 		effect: 'fade',
+		fadeEffect: {
+			crossFade: true,
+		},
 		breakpoints: {
 			'1600': {
 				slidesPerView: 1,
@@ -522,6 +533,10 @@
 			prevEl: '.slider-next',
 		},
 	});
+
+	if (!slider2HasMultipleSlides) {
+		$('.rr-slider-2-arrow-box').hide();
+	}
 	// 13. Swiper Js
 	const slider3swiper = new Swiper('.rr-slider-3-active', {
 		// Optional parameters
